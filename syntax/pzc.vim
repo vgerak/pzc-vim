@@ -28,6 +28,12 @@ syn keyword pazcalOperator	->
 
 " Comments
 syn match   pazcalCommentDelim          contained "/\*\|\*/"
+syn match   pazcalCommentSkip           contained "^\s*\*\($\|\s\+\)"
+syn cluster pazcalCommentStringContents contains=pazcalCommentSkip,pazcalCharacterNoError,@pazcalSpecialCharNoError
+syn region  pazcalCommentString         contained start=+L\="+ skip=+\\"+ end=+"+ end=+\*\(\\\s*\n\s*\)*\/+me=s-1 contains=@pazcalCommentStringContents
+syn region  pazcalComment               keepend matchgroup=pazcalCommentDelim start="/\*" end="\*/" contains=pazcalCommentString,@Spell
+syn match   pazcalComment	            "//.*$" display contains=pazcalTodo,@Spell
+
 syn match   pazcalRun		"\%^#!.*$"
 syn match   pazcalCoding	"\%^.*\%(\n.*\)\?#.*coding[:=]\s*[0-9A-Za-z-_.]\+.*$"
 syn keyword pazcalTodo		TODO FIXME XXX contained
@@ -109,6 +115,10 @@ syn match   pazcalBinError	"\<0[bB][01]*[2-9]\d*\>" display
   hi def link pazcalType	    Type
 
   hi def link pazcalComment		Comment
+  hi def link pazcalCommentString	Comment
+  hi def link pazcalCommentSkip		Comment
+  hi def link pazcalCommentDelim    Comment
+
   hi def link pazcalCoding		Special
   hi def link pazcalRun		    Special
   hi def link pazcalTodo		Todo
