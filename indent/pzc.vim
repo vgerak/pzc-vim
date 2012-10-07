@@ -10,7 +10,7 @@ if exists("b:did_indent")
 endif
 let b:did_indent = 1
 
-" C indenting is built-in, thus this is very simple
+" PZC indenting is C indenting which i built-in, thus this is very simple
 setlocal cindent
 
 let b:undo_indent = "setl cin<"

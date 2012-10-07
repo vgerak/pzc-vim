@@ -44,13 +44,13 @@ let b:match_skip = 's:comment\|string\|character'
 if (has("gui_win32") || has("gui_gtk")) && !exists("b:browsefilter")
   if &ft == "pzc"
     let b:browsefilter = "PZC Source Files (*.pzc *.pzh)\t*.pzc;*.pzh\n" .
-	  \ "C Header Files (*.pzh)\t*.pzh\n" .
+	  \ "PZC Header Files (*.pzh)\t*.pzh\n" .
 	  \ "PZC Source Files (*.pzc)\t*.pzc\n" .
 	  \ "All Files (*.*)\t*.*\n"
   else
     let b:browsefilter = "PZC Source Files (*.pzc)\t*.pzc\n" .
-	  \ "C Header Files (*.pzh)\t*.pzh\n" .
-	  \ "C++ Source Files (*.pzc)\t*.pzc\n" .
+	  \ "PZC Header Files (*.pzh)\t*.pzh\n" .
+	  \ "PZC Source Files (*.pzc)\t*.pzc\n" .
 	  \ "All Files (*.*)\t*.*\n"
   endif
 endif
