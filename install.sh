@@ -8,7 +8,13 @@ mkdir -p ~/.vim/syntax
 if [ -f ~/.vim/filetype.vim ]
 then
     # TODO: mabe this should be vimdiff
-    cat filetype.vim >> ~/.vim/filetype.vim
+    grep pzc ~/.vim/filetype.vim
+    if [ "$?" == "0" ];
+    then
+        vimdiff filetype.vim ~/.vim/filetype.vim
+    else
+        cat filetype.vim >> ~/.vim/filetype.vim
+    fi
 else
     cp filetype.vim ~/.vim
 fi
