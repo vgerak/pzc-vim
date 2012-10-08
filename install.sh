@@ -12,7 +12,7 @@ then
     if [ "$?" != "0" ];
     then
         grep pzc ~/.vim/filetype.vim > /dev/null
-        if [ "$?" != "0" ];
+        if [ "$?" == "0" ];
         then
             vimdiff filetype.vim ~/.vim/filetype.vim
         else
