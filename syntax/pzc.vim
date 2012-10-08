@@ -39,10 +39,10 @@ syn match   pazcalCoding	"\%^.*\%(\n.*\)\?#.*coding[:=]\s*[0-9A-Za-z-_.]\+.*$"
 syn keyword pazcalTodo		TODO FIXME XXX contained
 
 " Errors
-syn match pazcalError		"\<\d\+\D\+\>" display
-syn match pazcalError		"[$?]" display
-syn match pazcalError		"[&|]\{2,}" display
-syn match pazcalError		"[=]\{3,}" display
+syn keyword pazcalError     for
+syn match   pazcalError		"\<\d\+\D\+\>" display
+syn match   pazcalError		"[$?]" display
+syn match   pazcalError		"[&|=]\{3,}" display
 
 " Strings
 "syn region pazcalString		start=+'+ skip=+\\\\\|\\'\|\\$+ excludenl end=+'+ end=+$+ keepend contains=pazcalEscape,pazcalEscapeError,@Spell
