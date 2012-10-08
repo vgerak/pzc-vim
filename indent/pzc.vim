@@ -1,8 +1,8 @@
 " Vim indent file
-" Language:	pazcal
-" Maintainers:	Vasilis Gerakaris   <vgerak@gmail.com>
+" Language:    pazcal
+" Maintainers: Vasilis Gerakaris   <vgerak@gmail.com>
 "               Gregory Liras       <gregliras@gmail.com>
-" Last Change:	7 Oct 2012
+" Last Change: 7 Oct 2012
 
 " Only load this indent file when no other was loaded.
 if exists("b:did_indent")
@@ -11,6 +11,7 @@ endif
 let b:did_indent = 1
 
 " PZC indenting is C indenting which i built-in, thus this is very simple
-setlocal cindent
+setlocal smartindent cinwords cinwords=if,elif,else,switch,FOR,while,PROC,PROGRAM
+setlocal smartindent
 
 let b:undo_indent = "setl cin<"
