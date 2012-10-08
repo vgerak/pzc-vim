@@ -20,7 +20,7 @@ syn keyword pazcalStatement	extern PRIVATE const
 syn keyword pazcalStatement	PROGRAM PROC FUNC nextgroup=pazcalFunction skipwhite
 syn keyword pazcalType      int bool char REAL enum struct union
 syn match   pazcalFunction	"\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" display contained
-syn keyword pazcalFunction	WRITE WRITELN WRITESP WRITESPLN
+syn keyword pazcalFunction	WRITE WRITELN WRITESP WRITESPLN READ_INT
 syn keyword pazcalRepeat	FOR while do
 syn keyword pazcalRepeat	TO DOWNTO STEP
 syn keyword pazcalConditional	if else switch case
