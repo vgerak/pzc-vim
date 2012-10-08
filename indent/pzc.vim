@@ -1,7 +1,7 @@
 " Vim indent file
 " Language:    pazcal
 " Maintainers: Vasilis Gerakaris   <vgerak@gmail.com>
-"               Gregory Liras       <gregliras@gmail.com>
+"              Gregory Liras       <gregliras@gmail.com>
 " Last Change: 7 Oct 2012
 
 " Only load this indent file when no other was loaded.
