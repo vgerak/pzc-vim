@@ -41,13 +41,12 @@ syn keyword pazcalTodo		TODO FIXME XXX contained
 " Errors
 syn keyword pazcalError     for
 syn match   pazcalError		"\<\d\+\D\+\>" display
-syn match   pazcalError		"[$?]" display
+syn match   pazcalError		"[$]" display
 syn match   pazcalError		"[&|=]\{3,}" display
 
 " Strings
 "syn region pazcalString		start=+'+ skip=+\\\\\|\\'\|\\$+ excludenl end=+'+ end=+$+ keepend contains=pazcalEscape,pazcalEscapeError,@Spell
 syn region pazcalString		start=+"+ skip=+\\\\\|\\"\|\\$+ excludenl end=+"+ end=+$+ keepend contains=pazcalEscape,pazcalEscapeError,@Spell
-"syn region pazcalString		start=+"""+ end=+"""+ keepend contains=pazcalEscape,pazcalEscapeError,pazcalDocTest2,pazcalSpaceError,@Spell
 "syn region pazcalString		start=+'''+ end=+'''+ keepend contains=pazcalEscape,pazcalEscapeError,pazcalDocTest,pazcalSpaceError,@Spell
 
 syn match  pazcalEscape		    +\\[abfnrtv'"\\]+ display contained
