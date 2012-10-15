@@ -14,7 +14,7 @@ endif
 " Keywords
 syn keyword pazcalStatement	break continue NEXT default
 syn keyword pazcalStatement	return
-syn keyword pazcalStatement	false true
+syn keyword pazcalStatement	false true NULL
 syn keyword pazcalStatement	typedef
 syn keyword pazcalStatement	extern PRIVATE const
 syn keyword pazcalStatement	PROGRAM PROC FUNC nextgroup=pazcalFunction skipwhite
