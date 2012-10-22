@@ -1,0 +1,7 @@
+addon: pzc
+description: "highlight and indent Pazcal files"
+files:
+  - ftplugin/pzc.vim
+  - indent/pzc.vim
+  - syntax/pzc.vim
+  - ftdetect/pzc.vim

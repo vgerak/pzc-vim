@@ -11,7 +11,7 @@ endif
 let b:did_indent = 1
 
 " PZC indenting is C indenting which i built-in, thus this is very simple
-setlocal smartindent cinwords cinwords=if,elif,else,switch,FOR,while,PROC,PROGRAM
+setlocal smartindent cinwords=if,else,switch,FOR,while,do
 setlocal smartindent
 
 let b:undo_indent = "setl cin<"
