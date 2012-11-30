@@ -13,14 +13,16 @@ endif
 
 " Keywords
 syn keyword pazcalStatement	break continue NEXT default
-syn keyword pazcalStatement	return
-syn keyword pazcalStatement	false true
+syn keyword pazcalStatement return
+syn keyword pazcalStatement	false true NULL AND OR NOT MOD
+"syn keyword pazcalOperator  AND OR NOT MOD
 syn keyword pazcalStatement	typedef
 syn keyword pazcalStatement	extern PRIVATE const
 syn keyword pazcalStatement	PROGRAM PROC FUNC nextgroup=pazcalFunction skipwhite
 syn keyword pazcalType      int bool char REAL enum struct union unsigned long
 syn match   pazcalFunction	"\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" display contained
-syn keyword pazcalFunction	WRITE WRITELN WRITESP WRITESPLN READ_INT READ_REAL SKIP_LINE MIN MAX
+syn keyword pazcalFunction	WRITE WRITELN WRITESP WRITESPLN READ_INT READ_REAL SKIP_LINE MIN MAX FORM
+syn keyword pazcalMFunction abs pow sqrt log exp floor ceil
 syn keyword pazcalRepeat	FOR while do
 syn keyword pazcalRepeat	TO DOWNTO STEP
 syn keyword pazcalConditional	if else switch case
@@ -43,11 +45,13 @@ syn keyword pazcalError     for
 syn match   pazcalError		"\<\d\+\D\+\>" display
 syn match   pazcalError		"[$]" display
 syn match   pazcalError		"[&|=]\{3,}" display
+syn match   pazcalError     "\'..*\'" display
+
+" Chars
+syn match   pazcalChar		"\'.\'"
 
 " Strings
-"syn region pazcalString		start=+'+ skip=+\\\\\|\\'\|\\$+ excludenl end=+'+ end=+$+ keepend contains=pazcalEscape,pazcalEscapeError,@Spell
 syn region pazcalString		start=+"+ skip=+\\\\\|\\"\|\\$+ excludenl end=+"+ end=+$+ keepend contains=pazcalEscape,pazcalEscapeError,@Spell
-"syn region pazcalString		start=+'''+ end=+'''+ keepend contains=pazcalEscape,pazcalEscapeError,pazcalDocTest,pazcalSpaceError,@Spell
 
 syn match  pazcalEscape		    +\\[abfnrtv'"\\]+ display contained
 syn match  pazcalEscape		    "\\\o\o\=\o\=" display contained
@@ -108,12 +112,13 @@ syn match   pazcalBinError	"\<0[bB][01]*[2-9]\d*\>" display
 
   hi def link pazcalStatement	Statement
   hi def link pazcalFunction	Function
+  hi def link pazcalMFunction	Function
   hi def link pazcalConditional	Conditional
   hi def link pazcalRepeat		Repeat
   hi def link pazcalOperator	Operator
   hi def link pazcalType	    Type
 
-  hi def link pazcalComment		Comment
+  hi def link pazcalComment		    Comment
   hi def link pazcalCommentString	Comment
   hi def link pazcalCommentSkip		Comment
   hi def link pazcalCommentDelim    Comment
@@ -126,6 +131,7 @@ syn match   pazcalBinError	"\<0[bB][01]*[2-9]\d*\>" display
   hi def link pazcalIndentError	Error
   hi def link pazcalSpaceError	Error
 
+  hi def link pazcalChar        Character
   hi def link pazcalString		String
   hi def link pazcalRawString	String
   hi def link pazcalEscape		Special
