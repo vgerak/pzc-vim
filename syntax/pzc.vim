@@ -14,15 +14,15 @@ endif
 " Keywords
 syn keyword pazcalStatement	break continue NEXT default
 syn keyword pazcalStatement return
-syn keyword pazcalStatement	false true NULL AND OR NOT MOD
+syn keyword pazcalStatement	false true NULL AND OR NOT
 "syn keyword pazcalOperator  AND OR NOT MOD
 syn keyword pazcalStatement	typedef
 syn keyword pazcalStatement	extern PRIVATE const
 syn keyword pazcalStatement	PROGRAM PROC FUNC nextgroup=pazcalFunction skipwhite
 syn keyword pazcalType      int bool char REAL enum struct union unsigned long
 syn match   pazcalFunction	"\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" display contained
-syn keyword pazcalFunction	WRITE WRITELN WRITESP WRITESPLN READ_INT READ_REAL SKIP_LINE MIN MAX FORM
-syn keyword pazcalMFunction abs pow sqrt log exp floor ceil
+syn keyword pazcalFunction	WRITE WRITELN WRITESP WRITESPLN READ_INT READ_REAL SKIP_LINE FORM NEW DELETE
+syn keyword pazcalMFunction abs pow sqrt log exp floor ceil MOD MIN MAX
 syn keyword pazcalRepeat	FOR while do
 syn keyword pazcalRepeat	TO DOWNTO STEP
 syn keyword pazcalConditional	if else switch case
