@@ -49,6 +49,7 @@ syn match   pazcalError     "\'..*\'" display
 
 " Chars
 syn match   pazcalChar		"\'.\'"
+syn match   pazcalChar		"\'\\.\'"
 
 " Strings
 syn region pazcalString		start=+"+ skip=+\\\\\|\\"\|\\$+ excludenl end=+"+ end=+$+ keepend contains=pazcalEscape,pazcalEscapeError,@Spell
