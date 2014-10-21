@@ -11,7 +11,7 @@ The files needed for Pazcal syntax highlighting in vim
 #### Install via the shell
 Example install commands (versions **may vary**)
 
-    wget https://github.com/mastergreg/pzc-vim/tarball/master -O pzc-vim.tgz
-    tar -xzvf pzc-vim.tgz
-    cd mastergreg-pzc-vim-5ee0cdf
+    wget https://github.com/indorilftw/pzc-vim/archive/master.zip -O pzc.zip
+    unzip pzc.zip
+    pzc-vim-master
     bash install.sh
