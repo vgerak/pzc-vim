@@ -13,5 +13,5 @@ Example install commands (versions **may vary**)
 
     wget https://github.com/vgerak/pzc-vim/archive/master.zip -O pzc.zip
     unzip pzc.zip
-    pzc-vim-master
+    cd pzc-vim-master
     bash install.sh
